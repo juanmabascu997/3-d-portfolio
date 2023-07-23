@@ -46,15 +46,15 @@ import {
       icon: web,
     },
     {
-      title: "React Native Developer",
+      title: "React Developer",
       icon: mobile,
     },
     {
-      title: "Backend Developer",
+      title: "Frontend Developer",
       icon: backend,
     },
     {
-      title: "Content Creator",
+      title: "Vue Developer",
       icon: creator,
     },
   ];
@@ -85,7 +85,7 @@ import {
       icon: redux,
     },
     {
-      name: "Tailwind CSS",
+      name: "Vue JS",
       icon: tailwind,
     },
     {
@@ -97,20 +97,8 @@ import {
       icon: mongodb,
     },
     {
-      name: "Three JS",
-      icon: threejs,
-    },
-    {
       name: "git",
       icon: git,
-    },
-    {
-      name: "figma",
-      icon: figma,
-    },
-    {
-      name: "docker",
-      icon: docker,
     },
   ];
   
