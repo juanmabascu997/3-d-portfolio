@@ -12,6 +12,9 @@ import docker from "./tech/docker.png";
 import figma from "./tech/figma.png";
 import git from "./tech/git.png";
 import html from "./tech/html.png";
+import vue from "./tech/vue.png";
+import c from "./tech/c.png";
+import azure from "./tech/azure.png";
 import javascript from "./tech/javascript.png";
 import mongodb from "./tech/mongodb.png";
 import nodejs from "./tech/nodejs.png";
@@ -25,12 +28,24 @@ import meta from "./company/meta.png";
 import shopify from "./company/shopify.png";
 import starbucks from "./company/starbucks.png";
 import tesla from "./company/tesla.png";
+import pioeral from "./company/pioeral.jpeg";
+import pentas from "./company/pentas.jpeg";
+import acudir from "./company/acudir.jpeg";
 
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
+import smclothes from "./smclothes.jpg";
+import pickingpro from "./pickingpro.jpg";
+import portfolio from "./portfolio.png";
 
 export {
+  portfolio,
+  smclothes,
+  pickingpro,
+  azure,
+  c,
+  vue,
   logo,
   backend,
   creator,
@@ -59,4 +74,7 @@ export {
   carrent,
   jobit,
   tripguide,
+  pioeral,
+  acudir,
+  pentas
 };

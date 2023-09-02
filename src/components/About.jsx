@@ -51,9 +51,8 @@ const About = () => {
       >
         I am a web developer. I personally like to bring ideas and projects to
         life. Let creativity be visual. Currently, my knowledge allows me to
-        develop and work in the following technologies. - HTML y CSS,
-        JavaScript, Typescript, React, Redux, Vue JS, Node.js, C, C++, Express,
-        Figma Design, PostgreSQL.
+        develop and work in the following technologies: HTML, CSS,
+        JavaScript, Typescript and C#.
       </motion.p>
       <div className="mt-20 flex flex-wrap gap-10">
         {services.map((service, index) => (

@@ -3,6 +3,8 @@ import { Canvas } from "@react-three/fiber";
 import { Suspense, useEffect, useState } from "react";
 import CanvasLoader from "../Loader";
 
+import imagen from "../../assets/imagen/yo2.png"
+
 const ComputersCanvas = () => {
   const [isMobile, setIsMobile] = useState(false)
 
@@ -23,47 +25,9 @@ const ComputersCanvas = () => {
   },[])
 
   return (
-    <Canvas
-      camera={{ position: [20, 3, 5], fov: 25 }}
-      shadows
-      gl={{ preserveDrawingBuffer: true }}
-      framerLoop="demand"
-    >
-      <Suspense fallback={<CanvasLoader />}>
-        {/* <OrbitControls
-          enableZoom={false}
-          maxPolarAngle={Math.PI / 2}
-          minPolarAngle={Math.PI / 2}
-        /> */}
-        <Computers isMobile={isMobile} />
-      </Suspense>
-      <Preload all />
-    </Canvas>
-  );
-};
-
-const Computers = ({isMobile}) => {
-  const computer = useGLTF("./cell.glb");
-
-
-  return (
-    <mesh>
-      <hemisphereLight intensity={0.15} groundColor="black" />
-      <spotLight
-        position={[-20, -10, 10]}
-        angle={0.12}
-        penumbra={1}
-        intensity={1}
-        castShadow
-        shadow-mapSize={1024}
-      />
-      <pointLight intensity={1} />
-      <primitive
-        object={computer.scene}
-        scale={ isMobile ? 7 : 10 }
-        position={isMobile ? [1, -3, -5.2] : [2, -2.25, -0.5]}
-      />
-    </mesh>
+    <div className="flex flex-col justify-center items-end mt-5 mr-40">
+      <img src={imagen} alt="computers" />
+    </div>
   );
 };
 
