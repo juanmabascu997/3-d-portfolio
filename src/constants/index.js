@@ -90,7 +90,7 @@ import {
       icon: redux,
     },
     {
-      name: "Tailwind CSS",
+      name: "Vue JS",
       icon: tailwind,
     },
     {
@@ -100,10 +100,6 @@ import {
     {
       name: "MongoDB",
       icon: mongodb,
-    },
-    {
-      name: "Three JS",
-      icon: threejs,
     },
     {
       name: "git",
