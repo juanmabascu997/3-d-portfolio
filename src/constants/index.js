@@ -167,10 +167,10 @@ import {
   const testimonials = [
     {
       testimonial:
-        "I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.",
-      name: "Sara Lee",
-      designation: "CFO",
-      company: "Acme Co",
+        "Desde que comence a trabajar, he tenido el placer de conocer a alguien que siempre está dispuesto a ayudar y enfrentar los desafíos con entusiasmo. Juan Manuel es un ejemplo de profesionalismo y dedicación en nuestro campo. Siempre está listo para compartir su experiencia y conocimiento, lo que ha sido de gran ayuda para todo el equipo. Lo que realmente me ha impresionado de Juanma es su energía y buena onda constantes. Su actitud positiva es contagiosa y nos motiva a todos a dar lo mejor. En resumen, él es un desarrollador que no solo es un activo valioso para nuestro equipo, sino también un modelo a seguir. Estoy agradecida por la oportunidad de trabajar junto a alguien tan talentoso y dedicado.  #EquipoIncreíble #DesarrolloFrontEnd #TrabajoEnEquipo",
+      name: "Solange Burgos",
+      designation: "Sofware Engineer",
+      company: "Acudir Emergencias Medicas",
       image: "https://randomuser.me/api/portraits/women/4.jpg",
     },
     {
