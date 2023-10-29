@@ -40,6 +40,10 @@ import {
       title: "Work",
     },
     {
+      id: "feedback",
+      title: "Testimonials",
+    },
+    {
       id: "contact",
       title: "Contact",
     },
@@ -167,28 +171,28 @@ import {
   const testimonials = [
     {
       testimonial:
-        "Desde que comence a trabajar, he tenido el placer de conocer a alguien que siempre está dispuesto a ayudar y enfrentar los desafíos con entusiasmo. Juan Manuel es un ejemplo de profesionalismo y dedicación en nuestro campo. Siempre está listo para compartir su experiencia y conocimiento, lo que ha sido de gran ayuda para todo el equipo. Lo que realmente me ha impresionado de Juanma es su energía y buena onda constantes. Su actitud positiva es contagiosa y nos motiva a todos a dar lo mejor. En resumen, él es un desarrollador que no solo es un activo valioso para nuestro equipo, sino también un modelo a seguir. Estoy agradecida por la oportunidad de trabajar junto a alguien tan talentoso y dedicado.  #EquipoIncreíble #DesarrolloFrontEnd #TrabajoEnEquipo",
+        "Since I started working, I have had the pleasure of meeting someone who is always willing to help and face challenges with enthusiasm. Juan Manuel is an example of professionalism and dedication in our field. He is always ready to share his experience and knowledge, which has been a great help to the entire team. What has really impressed me about Juanma is his constant energy and good vibes. His positive attitude is contagious and motivates us all to do our best. In short, he is a developer who is not only a valuable asset to our team, but also a role model. I am grateful for the opportunity to work alongside someone so talented and dedicated.",
       name: "Solange Burgos",
       designation: "Sofware Engineer",
       company: "Acudir Emergencias Medicas",
-      image: "https://randomuser.me/api/portraits/women/4.jpg",
+      image: "./src/assets/solange.jpeg",
     },
     {
       testimonial:
-        "I've never met a web developer who truly cares about their clients' success like Rick does.",
-      name: "Chris Brown",
-      designation: "COO",
-      company: "DEF Corp",
-      image: "https://randomuser.me/api/portraits/men/5.jpg",
+        "Professional committed to delivering the final product. Focus on comprehensive solution proposals, without neglecting excellence in the detail applied in each individual solution. Efficient management of internal and external resources to ensure delivery of final product based on Streaming platform. Commitment to monitoring applied developments and generating improvement proposals. Adaptability to hybrid methodology.",
+      name: "Jerónimo Manuel Igolnikov",
+      designation: "Functional leader",
+      company: "Acudir Emergencias Medicas",
+      image: "./src/assets/jero.jpeg",
     },
-    {
-      testimonial:
-        "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
-      name: "Lisa Wang",
-      designation: "CTO",
-      company: "456 Enterprises",
-      image: "https://randomuser.me/api/portraits/women/6.jpg",
-    },
+    // {
+    //   testimonial:
+    //     "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
+    //   name: "Lisa Wang",
+    //   designation: "CTO",
+    //   company: "456 Enterprises",
+    //   image: "https://randomuser.me/api/portraits/women/6.jpg",
+    // },
   ];
   
   const projects = [
