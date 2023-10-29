@@ -39,7 +39,13 @@ import smclothes from "./smclothes.jpg";
 import pickingpro from "./pickingpro.jpg";
 import portfolio from "./portfolio.png";
 
+import solange from "./solange.jpeg";
+import jero from "./jero.jpeg";
+
+
 export {
+  solange,
+  jero,
   portfolio,
   smclothes,
   pickingpro,

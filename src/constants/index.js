@@ -27,7 +27,9 @@ import {
     c,
     vue,
     smclothes,
-    pickingpro
+    pickingpro,
+    jero,
+    solange
   } from "../assets";
   
   export const navLinks = [
@@ -175,7 +177,7 @@ import {
       name: "Solange Burgos",
       designation: "Sofware Engineer",
       company: "Acudir Emergencias Medicas",
-      image: "./src/assets/solange.jpeg",
+      image: solange,
     },
     {
       testimonial:
@@ -183,7 +185,7 @@ import {
       name: "Jerónimo Manuel Igolnikov",
       designation: "Functional leader",
       company: "Acudir Emergencias Medicas",
-      image: "./src/assets/jero.jpeg",
+      image: jero,
     },
     // {
     //   testimonial:
