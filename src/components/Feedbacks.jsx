@@ -1,9 +1,11 @@
 import { motion } from 'framer-motion'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { styles } from '../styles'
 import { SectionWrapper } from '../hoc'
 import { fadeIn, textVariant } from '../utils/motion'
-import { testimonials } from '../constants'
+import { testimonials as testimonials_en } from '../constants/index'
+import { testimonials as testimonials_es } from '../constants/index_es'
+import { useLanguage } from '../hoc/LanguageContext'
 
 const FeedbacksCard = ({index, testimonial, name, designation, company, image}) => {
   return (
@@ -37,14 +39,29 @@ const FeedbacksCard = ({index, testimonial, name, designation, company, image}) 
 }
 
 const Feedbacks = () => {
+  const { language } = useLanguage();
+  const [testimonials, setTestimonials] = useState([]);
+
+  useEffect(() => {
+    if (language == "es") setTestimonials(testimonials_es);
+    else setTestimonials(testimonials_en);
+  }, []);
+
+  useEffect(() => {
+    if (language == "es") setTestimonials(testimonials_es);
+    else setTestimonials(testimonials_en);
+  }, [language]);
+
   return (
     <div className='mt-12 bg-black-100 rounded-[20px]'>
       <div className={`bg-tertiary rounded-2xl ${styles.padding} min-h-[300px]`}>
         <motion.div
           variants={textVariant()}
         >
-          <p className={`${styles.sectionSubText}`}>What others say</p>
-          <h2 className={`${styles.sectionHeadText}`}>Testimonials.</h2>
+          <p className={`${styles.sectionSubText}`}>
+           {language == "es" ? "Lo que otros dicen" : "What others say"}
+          </p>
+          <h2 className={`${styles.sectionHeadText}`}>{language == "es" ? "Testimonios." : "Testimonials."}</h2>
         </motion.div>
       </div>
       <div

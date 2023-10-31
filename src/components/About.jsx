@@ -1,11 +1,13 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Tilt from "react-tilt";
 import { motion } from "framer-motion";
 import { styles } from "../styles";
-import { services } from "../constants";
+import { services as services_en } from '../constants/index'
+import { services as services_es } from '../constants/index_es'
 
 import { fadeIn, textVariant } from "../utils/motion";
 import { SectionWrapper } from "../hoc";
+import { useLanguage } from "../hoc/LanguageContext";
 
 const ServiceCard = ({ service, index }) => {
   return (
@@ -39,20 +41,39 @@ const ServiceCard = ({ service, index }) => {
 };
 
 const About = () => {
+  const { language } = useLanguage();
+  const [services, setServices] = useState([]);
+
+  useEffect(() => {
+    if(language == 'es')
+    setServices(services_es)
+    else
+    setServices(services_en)
+  }, []);
+
+  useEffect(() => {
+    if(language == 'es')
+    setServices(services_es)
+    else
+    setServices(services_en)
+  }, [language]);
+
   return (
     <>
       <motion.div variants={textVariant()}>
         <p className={styles.sectionSubText}>Introduccion</p>
-        <h2 className={styles.sectionHeadText}>Overview.</h2>
+        <h2 className={styles.sectionHeadText}>{language == 'en' ? 'Overview.' : 'Quien soy'}</h2>
       </motion.div>
       <motion.p
         variants={fadeIn("", "", 0.1, 1)}
         className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
       >
-        I am a web developer. I personally like to bring ideas and projects to
-        life. Let creativity be visual. Currently, my knowledge allows me to
-        develop and work in the following technologies: HTML, CSS,
-        JavaScript, Typescript and C#.
+        {
+          language == 'es' ? 
+          " Soy un desarrollador web. Personalmente me gusta dar vida a ideas y proyectos. Deja que la creatividad sea visual. Actualmente mis conocimientos me permiten desarrollar y trabajar en las siguientes tecnologías: HTML, CSS, JavaScript, Typecript y C#." : 
+          " I am a web developer. I personally like to bring ideas and projects to life. Let creativity be visual. Currently, my knowledge allows me to develop and work in the following technologies: HTML, CSS, JavaScript, Typescript and C#."
+        }
+       
       </motion.p>
       <div className="mt-20 flex flex-wrap gap-10">
         {services.map((service, index) => (

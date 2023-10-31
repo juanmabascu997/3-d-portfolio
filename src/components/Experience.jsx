@@ -1,11 +1,13 @@
 import { motion } from 'framer-motion'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component'
 import { styles } from '../styles'
 import 'react-vertical-timeline-component/style.min.css'
-import { experiences } from '../constants'
+import { experiences as experiences_en } from '../constants/index'
+import { experiences as experiences_es } from '../constants/index_es'
 import { SectionWrapper } from '../hoc'
 import { textVariant } from '../utils/motion'
+import { useLanguage } from '../hoc/LanguageContext'
 
 const ExperienceCard = ({ title, points, date, iconBg, icon, company_name}) => {
   return (
@@ -38,13 +40,38 @@ const ExperienceCard = ({ title, points, date, iconBg, icon, company_name}) => {
 }
 
 const Experience = () => {
+  const { language } = useLanguage();
+  const [experiences, setExperience] = useState([]);
+
+  useEffect(() => {
+    if(language == 'es')
+    setExperience(experiences_es)
+    else
+    setExperience(experiences_en)
+  }, []);
+
+  useEffect(() => {
+    if(language == 'es')
+    setExperience(experiences_es)
+    else
+    setExperience(experiences_en)
+  }, [language]);
+
   return (
     <>
       <motion.div
         variants={textVariant()}
       >
-        <p className={styles.sectionSubText}>What I have done so far</p>
-        <h2 className={styles.sectionHeadText}>Work Experience.</h2>
+        <p className={styles.sectionSubText}>
+          {
+            language == 'es' ? 'Lo que he hecho hasta ahora' : 'What I have done so far'
+          }
+        </p>
+        <h2 className={styles.sectionHeadText}>
+          {
+            language == 'es' ? 'Experiencia Laboral.' : 'Work Experience.'
+          }
+        </h2>
       </motion.div>
       <div className='mt-20 flex flex-col'>
         <VerticalTimeline>

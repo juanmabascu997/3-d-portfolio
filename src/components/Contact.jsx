@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useRef } from 'react'
 import { useState } from 'react'
 import emailjs from '@emailjs/browser'
@@ -7,6 +7,7 @@ import { styles } from '../styles'
 import { EarthCanvas } from './canvas'
 import { SectionWrapper } from '../hoc'
 import { slideIn } from '../utils/motion'
+import { useLanguage } from '../hoc/LanguageContext'
 
 const Contact = () => {
   const [form, setForm] = useState({
@@ -16,6 +17,8 @@ const Contact = () => {
   })
   const formRef = useRef()
   const [loading, setLoading] = useState(false)
+
+  const { language } = useLanguage();
 
   const handledChange = (event) =>{
     const { name, value } = event.target
@@ -64,46 +67,74 @@ const Contact = () => {
         className='flex-[0.75] bg-black-1000 p-8 rounded-2xl'
       >
         <p className={styles.sectionSubText}>
-          Get in touch
+          {
+            language === 'es' ?
+            '¿Tienes algo para decir?' :
+            'Get in touch'
+          }
         </p>
-        <h3 className={styles.sectionHeadText}>Contact.</h3>
+        <h3 className={styles.sectionHeadText}>
+          {
+            language === 'es' ?
+            'Contacto.' :
+            'Contact.'
+          }
+        </h3>
         <form 
           ref={formRef}
           onSubmit={handleSubmit}
           className='mt-12 flex flex-col gap-8'
         >
           <label className='flex flex-col'>
-            <span className='text-white font-medium mb-4'>Your Name</span>
+            <span className='text-white font-medium mb-4'>
+              {
+                language === 'es' ?
+                'Tu Nombre' :
+                'Your Name'
+              }
+            </span>
             <input 
               type="text"
               name='name'
               value={form.name}
               onChange={handledChange}
-              placeholder="What's your name?"
+              placeholder={language == 'en' ? "What's your name?" : "Cuál es tu nombre?"}
               className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outlined-none
               border-none font-medium'
             />
           </label>
           <label className='flex flex-col'>
-            <span className='text-white font-medium mb-4'>Your Email</span>
+            <span className='text-white font-medium mb-4'>
+              {
+                language === 'es' ?
+                'Tu Correo' :
+                'Your Email'
+              }
+            </span>
             <input 
               type="email"
               name='email'
               value={form.email}
               onChange={handledChange}
-              placeholder="What's your email?"
+              placeholder={language == 'en' ? "What's your email?" : "Cuál es tu correo?"}
               className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outlined-none
               border-none font-medium'
             />
           </label>
           <label className='flex flex-col'>
-            <span className='text-white font-medium mb-4'>Your Message</span>
+            <span className='text-white font-medium mb-4'>
+              {
+                language === 'es' ?
+                'Tu Mensaje' :
+                'Your Message'
+              }
+            </span>
             <textarea
               rows="7"
               name='message'
               value={form.message}
               onChange={handledChange}
-              placeholder="What do you want to say?"
+              placeholder={language == 'en' ? "What do you want to say?" : "Qué queres decir?"}
               className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outlined-none
               border-none font-medium'
             />
@@ -112,7 +143,7 @@ const Contact = () => {
             type='submit'
             className='bg-tertiary py-3 px-8 outline-none w-fit text-white font-bold shadow-md shadow-primary rounded-xl'
           >
-            {loading ? 'Sending...' : 'Send'}
+            {loading ? (language == 'en' ? 'Sending...' : 'Enviando...') : (language == 'en' ? 'Send' : 'Enviar')}
           </button>
         </form>
       </motion.div>

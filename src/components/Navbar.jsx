@@ -2,12 +2,18 @@ import React, {useEffect, useState} from 'react'
 import { Link } from 'react-router-dom'
 
 import { styles } from '../styles'
-import { navLinks } from '../constants'
+import { navLinks as navLinks_en } from '../constants/index'
+import { navLinks as navLinks_es } from '../constants/index_es'
+
 import { menu, close } from '../assets'
 import logo from '../assets/logo.svg'
+import { useLanguage } from '../hoc/LanguageContext'
+import LanguageSelector from './LenguajeSelector'
 
 const Navbar = () => {
   const [active, setActive] = useState("");
+  const [navLinks, setNavLinks] = useState([]);
+  const { language } = useLanguage();
   const [toggle, setToggle] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -21,10 +27,23 @@ const Navbar = () => {
       }
     };
 
+    if(language == 'es')
+    setNavLinks(navLinks_es)
+    else
+    setNavLinks(navLinks_en)
+
     window.addEventListener("scroll", handleScroll);
 
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+
+  useEffect(() => {
+    if(language == 'es')
+    setNavLinks(navLinks_es)
+    else
+    setNavLinks(navLinks_en)
+  }, [language]);
 
   return (
     <nav
@@ -65,6 +84,7 @@ const Navbar = () => {
               </li>)
             )
           }
+          <LanguageSelector />
         </ul>
         <div className='sm:hidden flex flex-1 justify-end items-center'>
           <img src={toggle ? close : menu} 
@@ -91,6 +111,7 @@ const Navbar = () => {
                     </li>)
                   )
               }
+              <LanguageSelector />
             </ul>
           </div>  
         </div>

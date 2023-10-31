@@ -25,7 +25,7 @@ const ComputersCanvas = () => {
   },[])
 
   return (
-    <div className="flex flex-col justify-center items-end mt-5 mr-40">
+    <div className="flex flex-col justify-center items-end mr-40">
       <img src={imagen} alt="computers" />
     </div>
   );

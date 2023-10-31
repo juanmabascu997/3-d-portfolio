@@ -1,8 +1,11 @@
 import { motion } from "framer-motion";
 import { styles } from "../styles";
 import { ComputersCanvas } from "./canvas";
+import { useLanguage } from "../hoc/LanguageContext";
 
 const Hero = () => {
+  const { language } = useLanguage();
+
   return (
     <section className=" relative w-full h-screen mx-auto">
       <div
@@ -14,12 +17,20 @@ const Hero = () => {
         </div>
         <div>
           <h1 className={`${styles.heroHeadText}`}>
-            Hi, I'm <span className="text-[#915eff]">Juan</span>
+            {language == 'en' ? "Hi, I'm " : 'Hola, soy '}<span className="text-[#915eff]">Juan</span>
           </h1>
-          <p className={`${styles.heroSubText} mt-2 text-white-100`}>
-            SSr Frontend Dev <br className="sm:block hidden" />
-            in React and Vue interfaces
-          </p>
+          {
+            language == 'en' ?
+            <p className={`${styles.heroSubText} mt-2 text-white-100`}>
+              SSr Frontend Dev <br className="sm:block hidden" />
+              in React and Vue interfaces
+            </p>
+            :
+            <p className={`${styles.heroSubText} mt-2 text-white-100`}>
+              Desarrollador SSr Frontend <br className="sm:block hidden" />
+              en interfaces React y Vue
+            </p>
+          }
         </div>
       </div>
       <ComputersCanvas />
