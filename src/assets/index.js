@@ -42,6 +42,8 @@ import portfolio from "./portfolio.png";
 import solange from "./solange.jpeg";
 import jero from "./jero.jpeg";
 
+import blogapp from "./blogapp.png";
+import weatherapp from "./weatherapp.png";
 
 export {
   solange,
@@ -82,5 +84,7 @@ export {
   tripguide,
   pioeral,
   acudir,
-  pentas
+  pentas,
+  blogapp,
+  weatherapp
 };

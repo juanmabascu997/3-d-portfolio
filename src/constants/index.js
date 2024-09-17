@@ -29,7 +29,9 @@ import {
     smclothes,
     pickingpro,
     jero,
-    solange
+    solange,
+    blogapp,
+    weatherapp
   } from "../assets";
   
   export const navLinks = [
@@ -276,6 +278,32 @@ import {
       ],
       image: portfolio,
       source_code_link: "https://github.com/juanmabascu997/3-d-portfolio",
+    },
+    {
+      name: "Blog App",
+      description:
+        "Application to simulate the operation of a blog.",
+      tags: [
+        {
+          name: "react",
+          color: "blue-text-gradient",
+        }
+      ],
+      image: blogapp,
+      source_code_link: "https://github.com/juanmabascu997/react-blog-webapp",
+    },
+    {
+      name: "Weather App",
+      description:
+        "Check the forecast for the city you need. Up to 3 days forecast.",
+      tags: [
+        {
+          name: "react",
+          color: "blue-text-gradient",
+        }
+      ],
+      image: weatherapp,
+      source_code_link: "https://github.com/juanmabascu997/ProjectWeatherAPI",
     },
   ];
   
