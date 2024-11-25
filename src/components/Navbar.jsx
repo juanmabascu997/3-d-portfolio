@@ -64,7 +64,7 @@ const Navbar = () => {
           <img src={logo} alt="logo" className='w-20 h-20 object-contain' />
           <p className='text-white text-[18px] font-bold cursor-pointer flex'>
             Juan &nbsp;
-          <span className='sm:block hidden'>| React & Vue Dev</span></p>
+          <span className='sm:block hidden'>| FullStack Dev</span></p>
         </Link>
         <ul className='list-none hidden sm:flex flex-row gap-10'>
           {

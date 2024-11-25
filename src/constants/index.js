@@ -16,12 +16,8 @@ import {
     mongodb,
     git,
     figma,
-    docker,
     pioeral,
-    carrent,
-    jobit,
-    tripguide,
-    threejs,
+    phinx,
     acudir,
     pentas,
     c,
@@ -29,6 +25,7 @@ import {
     smclothes,
     pickingpro,
     jero,
+    johann,
     solange,
     blogapp,
     weatherapp
@@ -162,12 +159,24 @@ import {
       company_name: "Acudir medical emergencies",
       icon: acudir,
       iconBg: "#383E56",
-      date: "Jun 2023 - Currently",
+      date: "Jun 2023 - Dec 2024",
       points: [
         "Developing and maintaining web applications using Vue.js and ASP .NET.",
         "I worked with the implementation of a new streaming system at Jitsi.",
         "Implementing responsive design and ensuring cross-browser compatibility.",
         "Contribute as DevOps in Azure with project and repository management.",
+        "Collaborate in a team with agile methodologies such as KANBAN and SCRUM."
+      ],
+    },
+    {
+      title: "Full Stack Developer",
+      company_name: "Phinx Lab",
+      icon: phinx,
+      iconBg: "#000000",
+      date: "Dec 2024 - Actually",
+      points: [
+        "Developing and maintaining web applications using React.js and Node.js.",
+        "Implementing responsive design and ensuring cross-browser compatibility.",
       ],
     }
   ];
@@ -189,14 +198,14 @@ import {
       company: "Acudir Emergencias Medicas",
       image: jero,
     },
-    // {
-    //   testimonial:
-    //     "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
-    //   name: "Lisa Wang",
-    //   designation: "CTO",
-    //   company: "456 Enterprises",
-    //   image: "https://randomuser.me/api/portraits/women/6.jpg",
-    // },
+    {
+      testimonial:
+        "When I joined the team, it was a pleasant surprise to know that I could count on Juan to bring me up to speed. He was part of the trident that brought the best quality and professionalism to the team; always willing to lend a hand, proposing innovative ideas with a lot of growth potential. It is always a pleasure to work with people as committed, professional and supportive as he is. It is certainly an experience to work alongside Juan.",
+      name: "Johann Alejandro Paraco Millán",
+      designation: "Tech leader",
+      company: "Acudir Emergencias Medicas",
+      image: johann,
+    },
   ];
   
   const projects = [

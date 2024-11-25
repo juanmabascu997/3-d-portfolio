@@ -22,13 +22,13 @@ const Hero = () => {
           {
             language == 'en' ?
             <p className={`${styles.heroSubText} mt-2 text-white-100`}>
-              SSr Frontend Dev <br className="sm:block hidden" />
-              in React and Vue interfaces
+              SSr Fullstack Dev <br className="sm:block hidden" />
+              , wiht experience in React, Vue, Node, and C# interfaces
             </p>
             :
             <p className={`${styles.heroSubText} mt-2 text-white-100`}>
-              Desarrollador SSr Frontend <br className="sm:block hidden" />
-              en interfaces React y Vue
+              Desarrollador SSr Fullstack <br className="sm:block hidden" />
+              , con experiencia en interfaces de React, Vue, Node, y C#
             </p>
           }
         </div>

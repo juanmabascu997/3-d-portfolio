@@ -42,8 +42,14 @@ const cv = {
       {
         "role": "Desarrollador Ssr Fullstack",
         "company": "Acudir Emergencias Médicas",
-        "year": "2022/06 - Presente",
+        "year": "2022/06 - 2024/12",
         "description": "Colaboro como desarrollador Ssr Fullstack, participando activamente en los despliegues productivos y siendo referente en el área de frontend, además de colaborar en el backend."
+      },
+      {
+        "role": "Desarrollador Fullstack",
+        "company": "Phinx Lab",
+        "year": "2024/12 - Presente",
+        "description": "Colaboro como desarrollador Fullstack, colaborando tanto en frontend, como en backend."
       },
       {
         "role": "Desarrollador Freelance",

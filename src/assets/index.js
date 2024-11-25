@@ -31,6 +31,7 @@ import tesla from "./company/tesla.png";
 import pioeral from "./company/pioeral.jpeg";
 import pentas from "./company/pentas.jpeg";
 import acudir from "./company/acudir.jpeg";
+import phinx from "./company/phinx.jpg";
 
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
@@ -41,6 +42,8 @@ import portfolio from "./portfolio.png";
 
 import solange from "./solange.jpeg";
 import jero from "./jero.jpeg";
+import johann from "./johann.jpeg";
+
 
 import blogapp from "./blogapp.png";
 import weatherapp from "./weatherapp.png";
@@ -48,6 +51,7 @@ import weatherapp from "./weatherapp.png";
 export {
   solange,
   jero,
+  johann,
   portfolio,
   smclothes,
   pickingpro,
@@ -86,5 +90,6 @@ export {
   acudir,
   pentas,
   blogapp,
-  weatherapp
+  weatherapp,
+  phinx
 };

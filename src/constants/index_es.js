@@ -16,12 +16,8 @@ import {
       mongodb,
       git,
       figma,
-      docker,
       pioeral,
-      carrent,
-      jobit,
-      tripguide,
-      threejs,
+      phinx,
       acudir,
       pentas,
       c,
@@ -29,6 +25,7 @@ import {
       smclothes,
       pickingpro,
       jero,
+      johann,
       solange,
       blogapp,
       weatherapp
@@ -162,12 +159,24 @@ import {
         company_name: "Acudir Emergencias Medicas",
         icon: acudir,
         iconBg: "#383E56",
-        date: "Junio 2023 - Actualmente",
+        date: "Junio 2023 - Diciembre 2024",
         points: [
           "Desarrollo y mantenimiento de aplicaciones web utilizando Vue.js y ASP .NET.",
           "Trabajé y lideré la implementación de un nuevo sistema de streaming en Jitsi.",
           "Implementar un diseño responsivo y garantizar la compatibilidad entre navegadores.",
-          "Contribir como DevOps en Azure en la gestión de proyectos y repositorios.",
+          "Contribuir como DevOps en Azure en la gestión de proyectos y repositorios.",
+          "Colaborar en un equipo con metodologías ágiles como KANBAN y SCRUM.",
+        ],
+      },
+      {
+        title: "Full Stack Developer",
+        company_name: "Phinx Lab",
+        icon: phinx,
+        iconBg: "#000000",
+        date: "Diciembre 2024 - Actualmente",
+        points: [
+         "Desarrollo y mantenimiento de aplicaciones web utilizando React.js y Node.js.",
+         "Implementar un diseño responsivo y garantizar la compatibilidad entre navegadores.",
         ],
       }
     ];
@@ -189,6 +198,14 @@ import {
         company: "Acudir Emergencias Medicas",
         image: jero,
       },
+      {
+        testimonial:
+          "Al incorporarme al equipo, fue una grata sorpresa saber que podia contar con Juan, para ponerme al corriente, él fue parte del tridente que mejor calidad y profesionalismo aportaban al equipo; siempre dispuesto a dar una mano, proponiendo ideas innovadoras y con mucho potencial de crecimiento. Siempre es en placer trabajar con personas tan comprometidas, profesionales y solidarias como él. Sin duda es toda una experiencia trabajar junto a Juan.",
+        name: "Johann Alejandro Paraco Millán",
+        designation: "Lider tecnico",
+        company: "Acudir Emergencias Medicas",
+        image: johann,
+      }
       // {
       //   testimonial:
       //     "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
